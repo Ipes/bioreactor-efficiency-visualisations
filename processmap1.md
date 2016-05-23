@@ -1,7 +1,7 @@
 ---
 layout: page
 title:
-permalink: /processmaps/1
+permalink: /processmaps/1/
 
 ---
 
@@ -10,7 +10,7 @@ permalink: /processmaps/1
 {% include process_map1_v4.html %}
 
 {% include image.html
-            img="img/legend3.png"
+            img="img/legend4.png"
             title="legend"
             caption="" %}
 
