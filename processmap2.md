@@ -7,10 +7,10 @@ permalink: /processmaps/2/
 
 
 
-{% include process_map2_v4.html %}
+{% include process_map2_v2.html %}
 
 {% include image.html
-            img="img/legend3.png"
+            img="img/legend4.png"
             title="legend"
             caption="" %}
 
