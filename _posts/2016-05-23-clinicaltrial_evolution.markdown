@@ -2,7 +2,7 @@
 layout: post
 title:  "Need for industrial scale MSC production"
 date:   2016-05-23 21:40:00 +0200
-
+categories: update
 ---
 
 The following chart shows the number of active clinical trials with mesenchymal stem cells as reported at different times in literature.

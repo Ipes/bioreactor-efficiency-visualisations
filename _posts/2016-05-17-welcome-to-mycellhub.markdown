@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome to MyCellHub.com!"
 date:   2016-05-17 21:40:00 +0200
-categories: jekyll update
+categories: update
 ---
  Hello World!
  
