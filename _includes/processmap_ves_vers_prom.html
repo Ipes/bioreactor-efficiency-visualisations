@@ -1,16 +1,18 @@
 <html>
 <head>
 
+<h1>Process map - vessel properties</h1>
+
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+
 <script type="text/javascript">
-
-
 
 google.load('visualization', '1.0', {packages: ['corechart','controls']});
         google.setOnLoadCallback(drawDashboard);
-
-
         function drawDashboard() {
             var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1JKuS4O3lY9Km5rlh5HFqb7guT78g_ACGD5q1xUHIxqM/edit?usp=sharing');
             query.send(handleQueryResponse);
@@ -29,12 +31,12 @@ google.load('visualization', '1.0', {packages: ['corechart','controls']});
               controlType: 'CategoryFilter',
                 containerId: 'sportFilter_div',
                 options: {
-                    filterColumnIndex: 3,
+                    filterColumnIndex: 5,
                    ui: {
                        labelStacking: 'vertical',
                        selectedValuesLayout: 'belowWrapping',
                        allowTyping:true,
-                       caption: 'Select cell type...',
+                       caption: 'Select type of culture vessel...',
                    }
                }
             });
@@ -44,64 +46,33 @@ google.load('visualization', '1.0', {packages: ['corechart','controls']});
                 containerId: 'rBubble_div',
                 options: {
                     title: '      ',
-                    height: 500,
-                    width: 900,
+                    height: 600,
+                    width: 1000,
                     chartArea: {left: '7%', top: '5%', width: '75%', height: '85%'},
                     backgroundColor: 'transparent',
 
 
-hAxis: {minValue: 0, maxValue: 19000000000, logScale: 'true', ticks:[1.0E+06, 1.0E+07,1.0E+08,1.0E+09,1.0E+10], baseline: 1000000, format: '#,###', baselineColor: '#BDBDBD', gridlines: {count: 15, color: 'transparent'}, title: 'Cell yield', titleTextStyle: {fontSize: 20,color: '#585858'}, textStyle: {fontSize: 15,color: '#585858'}},
+hAxis: {minValue: 0, maxValue: 19000000000, logScale: 'true', ticks:[1.0E+06, 1.0E+07,1.0E+08,1.0E+09,1.0E+10], baseline: 1000000, format: '#,###', baselineColor: '#BDBDBD', gridlines: {count: 15, color: 'transparent'}, title: 'Process scale (cell yield)', titleTextStyle: {fontSize: 20,color: '#585858'}, textStyle: {fontSize: 15,color: '#585858'}},
 
 vAxis: {minValue: 0, maxValue: 4000, format: '#,###',logScale: 'true', ticks: [10,100,1000], baseline: 1, baselineColor: '#BDBDBD', gridlines: {count: 20, color: 'transparent'}, title: 'Expansion factor', titleTextStyle: {fontSize: 20,color: '#585858'}, textStyle: {fontSize: 15,color: '#585858'}},
-                    bubble: {opacity: 0.55, stroke: 'transparent', textStyle: {fontSize: 1, color: 'transparent', auraColor: 'none'}, sizeAxis: {minSize: 5, minValue:1, maxSize:500}},
+                    bubble: {opacity: 0.65, stroke: 'transparent', textStyle: {fontSize: 1, color: 'transparent', auraColor: 'none'}, sizeAxis: {minSize: 1, minValue: 1, maxSize: 10}},
                     tooltip: {},
-                    legend: {position: 'right'},
+                    legend: {position: 'top'},
                     animation: {duration: 0, easing: 'out'}
                                 },
-                view: {columns: [0, 1, 2, 14, 13]}
-                //hier begint dus het probleem: tooltip laat niet toe om meer entries te laten zien dan degene die al gebruikt zijn om de plot te maken
+                view: {columns: [0, 1, 2, 3, 4]}
             }); 
-
-    var mouseX;
-    var mouseY;
-    $(document).mousemove(function(e) {
-        mouseX = e.pageX;
-        mouseY = e.pageY;
-    });
-
-    function handler1() {
-    console.log()
-        var x = mouseX;
-        var y = mouseY - 130;
-        var a = 1;
-        var b = 2;
-
-    }
-
-    function handler2(e) {
-        $('#custom_tooltip').fadeOut('fast');
-}
-
-
         var dashboard = new google.visualization.Dashboard(document.getElementById('dashboard_div'));
             dashboard.bind(writerFilter, rBubbleChart);
-    google.visualization.events.addListener(dashboard, 'ready', function(){
- google.visualization.events.addListener(rBubbleChart.getChart(), 'onmouseover', handler1);
-    google.visualization.events.addListener(rBubbleChart.getChart(), 'onmouseout', handler2);
-    });
-            dashboard.draw(data);
-
+                dashboard.draw(data);
         }
 
 </script>
 
-</head>
-
-<body>
 <div id="dashboard_div"></div>
     <div id="sportFilter_div"></div>
     <div id="rBubble_div"></div>
-<div id="custom_tooltip"></div>
+
 
 </body>
 </html>
