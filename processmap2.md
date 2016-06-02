@@ -14,6 +14,4 @@ permalink: /processmaps/2/
             title="legend"
             caption="" %}
             
-<img src="img/legend4.png" alt="legend" width="900" height="150"/>
-
 Prometheus KU Leuven,  All Rights Reserved 2016
