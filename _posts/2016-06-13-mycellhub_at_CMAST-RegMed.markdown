@@ -16,7 +16,7 @@ An overview of the outcome of the Innovation Lab session on the MyCellHub projec
 Clearly enough food for thought for the optimisation of the project!
 
 {% include image.html
-            img="img/CMAST_poster_complete.png"
+            img="img/CMAST_poster_comlete.png"
             title=""
             caption="" %}
 
