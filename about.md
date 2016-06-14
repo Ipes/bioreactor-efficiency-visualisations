@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-MyCellHub.com is a collaborative platform that aims to use data-driven methods for the collaborative development and optimisation of cell-based bioprocesses.
+MyCellHub.com is an online platform that aims to use data-driven methods for the collaborative development and optimisation of cell-based bioprocesses.
 
 As cell-based technologies are rapidly evolving, the demand for industrial scale production of cells is increasing.
 However, the scale-up of cell production from the laboratory to a cost-effective and reliable industrial scale production process is not straightforward and requires large amounts of process data in order to prove process comparability.
