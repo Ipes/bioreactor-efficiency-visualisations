@@ -1,5 +1,5 @@
 ---
-layout: none
+layout:
 title:
 permalink: /processmaps/1/
 
