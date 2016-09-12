@@ -9,7 +9,7 @@ The following chart shows the number of active clinical trials with mesenchymal 
 While the number of early phase trials is increasing significantly, the evolution towards later phase trials, where production volumes are required to increase, is limited.
 This can be at least partly attributed to the challenges regarding clinical-scale cell production.
 
-{% include bar_chart.html %}
+{% include clinical_phase_v2.html %}
 
 
 References were aggregated based on similarity of selection criteria and data source ([ClinicalTrials.gov][cl_gov]):
